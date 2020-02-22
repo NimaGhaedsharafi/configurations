@@ -1,0 +1,4 @@
+export GOPATH=$HOME/go
+export PATH=$PATH:/Users/nghaedsharafi/mvn/bin:$GOPATH/bin:/Applications/openshift-origin-client-tools-v3/:/usr/local/etc/bash_completion.d
+export PATH="$HOME/.cargo/bin:$PATH"
+export PATH=$HOME/bin:/usr/local/bin:$PATH:$HOME/.composer/vendor/bin
