@@ -1,0 +1,22 @@
+# alias
+alias ts="./vendor/bin/phpunit"
+alias dl="axel -a"
+alias gclean="git stash --include-untracked && git stash drop"
+alias tinker="php artisan tinker"
+alias svpn="sudo openfortivpn -c ~/snappcloud --persistent 20"
+alias dkps="docker ps"
+alias dkst="docker stats"
+alias dkpsa="docker ps -a"
+alias dkimgs="docker images"
+alias dkcpup="docker-compose up -d"
+alias dkcpdown="docker-compose down"
+alias dkcpstart="docker-compose start"
+alias dkcpstop="docker-compose stop"
+
+
+# functions
+pass_gen () { openssl rand -base64 ${1:-8} }
+dcleanup(){
+    docker rm -v $(docker ps --filter status=exited -q 2>/dev/null) 2>/dev/null
+    docker rmi $(docker images --filter dangling=true -q 2>/dev/null) 2>/dev/null
+}
