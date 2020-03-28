@@ -12,7 +12,7 @@ alias dkcpup="docker-compose up -d"
 alias dkcpdown="docker-compose down"
 alias dkcpstart="docker-compose start"
 alias dkcpstop="docker-compose stop"
-
+alias setgopath="export GOPATH=$PWD"
 
 # functions
 pass_gen () { openssl rand -base64 ${1:-8} }
